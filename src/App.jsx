@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Dog } from './component/index.jsx';
 
 function App() {
     const [data, setData] = useState();
@@ -15,6 +16,7 @@ function App() {
     return (
         <>
             <Link to={"/test"}>To test page</Link>
+            <Dog />
         </>
     );
 }

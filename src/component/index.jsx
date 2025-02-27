@@ -1,4 +1,4 @@
-import dog from "./cool_dog.jpg";
+import dog from "./dog.jpg";
 
 export function Dog() {
     return (
