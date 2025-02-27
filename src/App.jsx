@@ -1,11 +1,22 @@
-function App() {
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-  return (
-    <>
-      <h1>I have successfully deployed</h1>
-        <h2>Again</h2>
-    </>
-  )
+function App() {
+    const [data, setData] = useState();
+
+    useEffect(() => {
+        async function getData() {
+            const res = await fetch("https://v2.api.noroff.dev/auction/listings");
+            const data = await res.json();
+            console.log(data);
+        }
+        getData();
+    }, []);
+    return (
+        <>
+            <Link to={"/test"}>To test page</Link>
+        </>
+    );
 }
 
-export default App
+export default App;
